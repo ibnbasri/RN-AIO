@@ -34,7 +34,7 @@ export default () => {
 
   return (
     <Box
-      style={{backgroundColor: theme.colors.pink}}
+      style={{backgroundColor: theme.colors.pink, paddingVertical: 40}}
       width={230}
       marginLeft={{
         xs: animation,
@@ -43,19 +43,14 @@ export default () => {
         lg: animation,
         xl: animation,
       }}>
-      <View style={{height: 70}}>
+      <View style={{height: 70, alignItems: 'center'}}>
         <Text>Logo</Text>
       </View>
       <View>
         <View>
-          <TouchableOpacity onPress={() => linkTo('/')} style={{padding: 18}}>
+          <TouchableOpacity onPress={() => linkTo('/')} style={{padding: 20}}>
             Home
           </TouchableOpacity>
-        </View>
-        <View>
-          <Link to="/settings" style={{padding: 18}}>
-            Users
-          </Link>
         </View>
       </View>
     </Box>

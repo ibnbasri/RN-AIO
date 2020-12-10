@@ -25,6 +25,15 @@ export default ({children}: IProps) => {
             {children}
           </Box>
         </View>
+        <View
+          style={{
+            width: 380,
+            borderLeftWidth: 1,
+            borderLeftColor: '#E4E4E4',
+            padding: 40,
+          }}>
+          <Text>Hello</Text>
+        </View>
       </View>
     </View>
   );
