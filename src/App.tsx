@@ -1,23 +1,21 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {theme} from './theme';
-export const ThemeContext = React.createContext({});
 import {createStackNavigator} from '@react-navigation/stack';
+import Web from './navigation/web';
+import linking from './navigation/linking.web';
 const Stack = createStackNavigator();
-import Layout from './layouts/Master.web';
-import Home from './containers/App/Home.web';
+export const ThemeContext = React.createContext({});
 
 export default function App() {
   return (
     <ThemeContext.Provider value={theme}>
-      <Layout>
-        <NavigationContainer>
-          <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="Home" component={Home} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Layout>
+      <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Root" component={Web} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </ThemeContext.Provider>
   );
 }

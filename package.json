@@ -10,6 +10,7 @@
     "web:build": "react-scripts build"
   },
   "dependencies": {
+    "@expo/vector-icons": "^12.0.1",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
@@ -20,6 +21,7 @@
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.0",
+    "react-native-svg": "^12.1.0",
     "react-native-web": "^0.14.9"
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "eslint": "^7.15.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "react-native-svg-transformer": "^0.14.3",
     "react-scripts": "^4.0.1",
     "typescript": "^3.8.3"
   },
