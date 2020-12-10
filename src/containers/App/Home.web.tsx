@@ -32,7 +32,7 @@ export default () => {
                 {route.name}
               </Text>
               <Text style={{color: 'rgb(82, 114, 125)'}}>
-                Hello Ibn Basri Wellcome back{' '}
+                Hello Ibn Basri Welcome back{' '}
               </Text>
             </View>
             <View
