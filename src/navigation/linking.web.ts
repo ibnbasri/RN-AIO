@@ -8,6 +8,7 @@ export default {
           Settings: 'settings',
         },
       },
+      Login: 'login',
     },
   },
 };

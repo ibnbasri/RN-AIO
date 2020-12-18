@@ -4,9 +4,11 @@ import {ThemeContext} from '../../App';
 import {Box} from '../../components/Box';
 import {useRoute} from '@react-navigation/native';
 import Home from '../../assets/calendar';
+import useMenu from '../../layouts/components/Sidebar/hooks';
 
 export default () => {
   const themes: any = React.useContext(ThemeContext);
+  const [sidebar, onChanges] = useMenu();
   const route = useRoute();
 
   return (
@@ -18,41 +20,6 @@ export default () => {
             marginRight: '-0.5rem',
             marginLeft: '-0.5rem',
           }}>
-          <Box
-            paddingLeft="m"
-            paddingRight="m"
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              marginBottom: 32,
-            }}>
-            <View>
-              <Text
-                style={{fontSize: 20, fontWeight: 'bold', marginBottom: 10}}>
-                {route.name}
-              </Text>
-              <Text style={{color: 'rgb(82, 114, 125)'}}>
-                Hello Ibn Basri Welcome back{' '}
-              </Text>
-            </View>
-            <View
-              style={{
-                padding: 8,
-                backgroundColor: '#F3F4FA',
-                borderRadius: 4,
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <Text style={{marginHorizontal: 8}}>
-                Today is {''}
-                {new Date().toLocaleString('id-ID', {weekday: 'long'})}
-              </Text>
-              <View style={{marginRight: 8}}>
-                <Home />
-              </View>
-            </View>
-          </Box>
-
           <Box style={{flexDirection: 'row', flexWrap: 'wrap', flex: 1}}>
             <Box
               width="100%"
@@ -64,6 +31,7 @@ export default () => {
               />
             </Box>
             <Box
+              style={{marginBottom: 20}}
               width={{xs: '100%', s: '100%', md: '100%', lg: '100%', xl: '50%'}}
               paddingLeft="m"
               paddingRight="m">
@@ -73,7 +41,9 @@ export default () => {
               width={{xs: '100%', s: '100%', md: '100%', lg: '100%', xl: '50%'}}
               paddingRight="m"
               paddingLeft="m">
-              <Box style={{backgroundColor: '#726a95', padding: 28}} />
+              <Box style={{backgroundColor: '#726a95', padding: 28}}>
+                <Text>Bernilai {sidebar}</Text>
+              </Box>
             </Box>
           </Box>
         </View>

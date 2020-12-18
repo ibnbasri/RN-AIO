@@ -1,16 +1,15 @@
-import {useState, useEffect} from 'react';
+import {useState, useCallback, useEffect} from 'react';
 import useDimensions from '../../../components/hooks/useDimension';
+import {GestureResponderEvent} from 'react-native';
 
 export default () => {
   const [sidebar, setSidebar] = useState(false);
+  const dimension = useDimensions();
 
-  const onChange = () => {
-    //const {width}: number = useDimensions();
+  const onChanges = useCallback(() => {
+    console.log('Berubah');
+    setSidebar((v) => !v);
+  }, [setSidebar]);
 
-    setSidebar(true);
-  };
-
-  useEffect(() => {}, []);
-
-  return {sidebar, onChange};
+  return [sidebar, onChanges];
 };

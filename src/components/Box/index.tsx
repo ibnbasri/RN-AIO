@@ -24,6 +24,7 @@ const getResponsiveValue = ({value, dimensions, theme}: any) => {
 };
 
 export const Box = ({
+  flex,
   style,
   padding,
   margin,
@@ -34,6 +35,11 @@ export const Box = ({
   paddingRight,
   paddingLeft,
   transform,
+  borderLeftWidth,
+  py,
+  display,
+  position,
+  flexDirection,
   ...rest
 }: any) => {
   const theme: any = useContext(ThemeContext);
@@ -64,6 +70,20 @@ export const Box = ({
         width: getResponsiveValue({value: width, dimensions, theme}),
         maxWidth: getResponsiveValue({value: maxWidth, dimensions, theme}),
         transform: getResponsiveValue({value: transform, dimensions, theme}),
+        display: getResponsiveValue({value: display, dimensions, theme}),
+        position: getResponsiveValue({value: position, dimensions, theme}),
+        flex: getResponsiveValue({value: flex, dimensions, theme}),
+        borderLeftWidth: getResponsiveValue({
+          value: borderLeftWidth,
+          dimensions,
+          theme,
+        }),
+        paddingVertical: getResponsiveValue({value: py, dimensions, theme}),
+        flexDirection: getResponsiveValue({
+          value: flexDirection,
+          dimensions,
+          theme,
+        }),
         ...style,
       }}
       {...rest}
