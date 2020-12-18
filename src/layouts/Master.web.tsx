@@ -11,14 +11,15 @@ interface IProps {
 
 export default ({children}: IProps) => {
   return (
-    <View style={{flex: 1, backgroundColor: '#FFFF'}}>
+    <View style={{flex: 1, backgroundColor: '#FFFF', zIndex: 3500}}>
       <View
         style={{
           flexDirection: 'row',
           flexGrow: 1,
+          zIndex: 1500,
         }}>
         <Sidebar />
-        <View style={{flex: 1, backgroundColor: '#FFFF'}}>
+        <View style={{flex: 1, backgroundColor: '#FFFF', zIndex: 5000}}>
           <Box
             style={{flex: 1}}
             width="100%"
@@ -41,12 +42,20 @@ export default ({children}: IProps) => {
                   <View
                     style={{
                       padding: 24,
-                      backgroundColor: '#aaead0',
-                      borderRadius: 10,
-                      height: 155,
+                      backgroundColor: '#559584',
+                      borderRadius: 8,
+                      height: 145,
+                      zIndex: 1030,
                     }}>
-                    <Text style={{marginBottom: 18}}>Saepudin</Text>
-                    <Text style={{fontWeight: 'bold', fontSize: 18}}>
+                    <Text style={{color: 'white', marginBottom: 18}}>
+                      Saepudin
+                    </Text>
+                    <Text
+                      style={{
+                        color: 'white',
+                        fontWeight: '500',
+                        fontSize: 17,
+                      }}>
                       Rp250.000
                     </Text>
                   </View>

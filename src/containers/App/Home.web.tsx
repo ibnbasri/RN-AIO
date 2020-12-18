@@ -41,8 +41,8 @@ export default () => {
               width={{xs: '100%', s: '100%', md: '100%', lg: '100%', xl: '50%'}}
               paddingRight="m"
               paddingLeft="m">
-              <Box style={{backgroundColor: '#726a95', padding: 28}}>
-                <Text>Bernilai {sidebar}</Text>
+              <Box style={{backgroundColor: '#726a95', padding: 15}}>
+                <Text></Text>
               </Box>
             </Box>
           </Box>
